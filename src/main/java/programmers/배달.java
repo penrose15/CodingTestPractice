@@ -26,7 +26,7 @@ public class 배달 {
         return count;
     }
     static int count = 1;
-    public static void dfs(int[][] map, boolean[] dist, int K, int start, boolean[] visited, int total) {
+    public static void dfs(int[][] map, boolean[] dist, int K, int start, boolean[] visited) {
 
 
         for(int i = 0; i<map.length; i++) {
