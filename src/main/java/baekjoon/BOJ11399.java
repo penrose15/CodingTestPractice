@@ -16,19 +16,17 @@ public class BOJ11399 {
             arr[i] = Integer.parseInt(st.nextToken());
         }
 
+
         for(int i = 0; i<N; i++) {
-            int min = Integer.MAX_VALUE;
-            int minIdx = i;
-            for(int j = i; j<N; j++) {
-                if(arr[j] < min) {
-                    min = arr[j];
-                    minIdx = j;
+            for(int j = i-1; j>= 0; j--) {
+                if(arr[j] > arr[j+1]) {
+                    int tmp = arr[j+1];
+                    arr[j+1] = arr[j];
+                    arr[j] = tmp;
                 }
             }
-            int tmp = arr[i];
-            arr[i] = arr[minIdx];
-            arr[minIdx] = tmp;
         }
+
         int result = 0;
         for(int i = 0; i<N; i++) {
             int sum = 0;
