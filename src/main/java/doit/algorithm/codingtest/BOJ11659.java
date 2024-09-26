@@ -16,22 +16,22 @@ public class BOJ11659 {
         String[] arr = br.readLine().split(" ");
         int[] numArr = new int[N];
 
-        for(int i = 0; i < N; i++) {
+        for (int i = 0; i < N; i++) {
             numArr[i] = Integer.parseInt(arr[i]);
         }
 
-        int[] sumArr = new int[N+1];
-        for(int i = 1; i <= N; i++) {
-            sumArr[i] = sumArr[i - 1] + numArr[i-1];
+        int[] sumArr = new int[N + 1];
+        for (int i = 1; i <= N; i++) {
+            sumArr[i] = sumArr[i - 1] + numArr[i - 1];
         }
 
         List<Integer> list = new ArrayList<>();
-        for(int i = 0; i < M; i++) {
+        for (int i = 0; i < M; i++) {
             input = br.readLine();
             int start = Integer.parseInt(input.split(" ")[0]);
             int end = Integer.parseInt(input.split(" ")[1]);
 
-            list.add(sumArr[end] - sumArr[start-1]);
+            list.add(sumArr[end] - sumArr[start - 1]);
         }
 
         for (Integer integer : list) {

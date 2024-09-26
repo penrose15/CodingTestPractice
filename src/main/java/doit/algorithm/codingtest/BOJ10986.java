@@ -13,27 +13,27 @@ public class BOJ10986 {
 
         String input = br.readLine();
         String[] strArr = input.split(" ");
-        long[] arr = new long[N+1];
+        long[] arr = new long[N + 1];
 
-        for (int i = 1; i < N+1; i++) {
-            arr[i] = Long.parseLong(strArr[i-1]) % M;
+        for (int i = 1; i < N + 1; i++) {
+            arr[i] = Long.parseLong(strArr[i - 1]) % M;
         }
 
-        long[] sumArr = new long[N+1];
-        for(int i = 1; i<N+1; i++) {
-            sumArr[i] = (sumArr[i-1] + arr[i]) % M;
+        long[] sumArr = new long[N + 1];
+        for (int i = 1; i < N + 1; i++) {
+            sumArr[i] = (sumArr[i - 1] + arr[i]) % M;
         }
 
         long[] div = new long[M];
-        for(int i = 1; i<N+1; i++) {
+        for (int i = 1; i < N + 1; i++) {
             int a = (int) (sumArr[i] % M);
             div[a] += 1;
         }
 
         long result = 0;
-        for(int i = 0; i<M; i++) {
-            if(div[i] == 0) continue;
-            if(i == 0) {
+        for (int i = 0; i < M; i++) {
+            if (div[i] == 0) continue;
+            if (i == 0) {
                 if (div[i] > 1) {
                     result += div[i] + (div[i] * (div[i] - 1) / 2);
                 }
