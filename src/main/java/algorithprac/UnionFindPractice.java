@@ -6,7 +6,7 @@ public class UnionFindPractice {
     /*
     * 그래프/트리의 대표적 알고리즘
     * union : 각 노드가 속한 집합을 1개로 합치는 연산
-    * find : 특정 노드 a에 관해 a가 ㅅ속한 집합의 대표 노드를 반환하는 연산
+    * find : 특정 노드 a에 관해 a가 속한 집합의 대표 노드를 반환하는 연산
     * */
     static int[] parent;
     public static void main(String[] args) throws IOException {
