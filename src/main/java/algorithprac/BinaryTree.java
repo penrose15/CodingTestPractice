@@ -10,6 +10,9 @@ public class BinaryTree {
         N = 7;
         tree = new int[26][2];
 
+        preOrder(0);
+        inOrder(0);
+        postOrder(0);
     }
 
     static void preOrder(int node) {
